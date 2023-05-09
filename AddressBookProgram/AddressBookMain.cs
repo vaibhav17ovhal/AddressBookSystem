@@ -101,5 +101,29 @@ namespace AddressBookProgram
                     break;
             }
         }
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter weather you want to delete or not: \n 1.YES \n 2.NO");
+            int select1 = Convert.ToInt32(Console.ReadLine());
+            switch (select1)
+            {
+                case 1:
+                    Console.WriteLine("Enter name to delete details: ");
+                    string name = Console.ReadLine();
+                    foreach (var data in main)
+                    {
+                        if (data.FirstName.Equals(name))
+                        {
+                            contact = data;
+                        }
+                    }
+                    main.Remove(contact);
+                    Console.WriteLine("Contact Successfully deleted");
+                    break;
+                case 2:
+                    Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+                    break;
+            }
+        }
     }
 }
