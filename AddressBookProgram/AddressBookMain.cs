@@ -10,7 +10,6 @@ namespace AddressBookProgram
     {
         Contact contact = new Contact();
         List<Contact> main = new List<Contact>();
-
         public void AddContact()
         {
             Console.Write("Enter the first name: ");
@@ -42,6 +41,65 @@ namespace AddressBookProgram
         public void Display()
         {
             Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+        }
+        public void EditContact()
+        {
+            Console.WriteLine("Enter weather you want to edit or not: \n 1.YES \n 2.NO");
+            int select = Convert.ToInt32(Console.ReadLine());
+            switch (select)
+            {
+                case 1:
+                    Console.Write("Edit using first name: ");
+                    string name = Console.ReadLine();
+                    foreach (var data in main)
+                    {
+                        if (data.FirstName == name)
+                        {
+                            Console.WriteLine("Choose any parameter to edit: \n 1.FirstName \n 2.LastName \n 3.Address \n 4.City \n 5.State \n 6.Zip \n 7.PhoneNumber \n 8.Email \n 9.Quit Edit");
+                            int option = Convert.ToInt32(Console.ReadLine());
+                            switch (option)
+                            {
+                                case 1:
+                                    Console.Write("Enter new FirstName: ");
+                                    data.FirstName = Console.ReadLine();
+                                    break;
+                                case 2:
+                                    Console.Write("Enter new LastName: ");
+                                    data.LastName = Console.ReadLine();
+                                    break;
+                                case 3:
+                                    Console.Write("Enter new Address: ");
+                                    data.Address = Console.ReadLine();
+                                    break;
+                                case 4:
+                                    Console.Write("Enter new City: ");
+                                    data.City = Console.ReadLine();
+                                    break;
+                                case 5:
+                                    Console.Write("Enter new State: ");
+                                    data.State = Console.ReadLine();
+                                    break;
+                                case 6:
+                                    Console.Write("Enter new Zip: ");
+                                    data.Zip = Console.ReadLine();
+                                    break;
+                                case 7:
+                                    Console.Write("Enter new PhoneNumber: ");
+                                    data.PhoneNumber = Console.ReadLine();
+                                    break;
+                                case 8:
+                                    Console.Write("Enter new Email: ");
+                                    data.Email = Console.ReadLine();
+                                    break;
+                                case 9:
+                                    break;
+                            }
+                        }
+                    }
+                    break;
+                case 2:
+                    break;
+            }
         }
     }
 }
