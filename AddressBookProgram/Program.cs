@@ -21,18 +21,6 @@ namespace AddressBookProgram
                 main.Display();
                 Console.WriteLine("\n");
             }
-
-            /*Console.WriteLine("\n==========||==========\n");
-
-            main.EditContact();
-            Console.WriteLine("==========||==========\n");
-            main.Display();
-
-            Console.WriteLine("\n==========||==========\n");
-
-            main.DeleteContact();
-            Console.WriteLine("==========||==========\n");
-            */
         }
     }
 }
