@@ -12,11 +12,17 @@ namespace AddressBookProgram
 
             AddressBookMain main = new AddressBookMain();
 
-            main.AddContact();
-            Console.WriteLine("==========||==========\n");
-            main.Display();
+            Console.Write("Enter the number of contact you want to save: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= num; i++)
+            {
+                main.AddContact();
+                Console.WriteLine("==========||==========\n");
+                main.Display();
+                Console.WriteLine("\n");
+            }
 
-            Console.WriteLine("\n==========||==========\n");
+            /*Console.WriteLine("\n==========||==========\n");
 
             main.EditContact();
             Console.WriteLine("==========||==========\n");
@@ -26,6 +32,7 @@ namespace AddressBookProgram
 
             main.DeleteContact();
             Console.WriteLine("==========||==========\n");
+            */
         }
     }
 }

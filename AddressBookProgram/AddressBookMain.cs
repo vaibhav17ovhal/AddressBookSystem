@@ -11,7 +11,7 @@ namespace AddressBookProgram
         Contact contact = new Contact();
         List<Contact> main = new List<Contact>();
         public void AddContact()
-        {
+        {           
             Console.Write("Enter the first name: ");
             contact.FirstName = Console.ReadLine();
 
@@ -37,10 +37,12 @@ namespace AddressBookProgram
             contact.Email = Console.ReadLine();
 
             main.Add(contact);
+
+            Console.WriteLine("\n");      
         }
         public void Display()
-        {
-            Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+        { 
+            Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);  
         }
         public void EditContact()
         {
