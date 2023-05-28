@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace AddressBookProgram
         Contact contact = new Contact();
         List<Contact> main = new List<Contact>();
         public void AddContact()
-        {           
+        {   
             Console.Write("Enter the first name: ");
             contact.FirstName = Console.ReadLine();
 
@@ -38,7 +39,15 @@ namespace AddressBookProgram
 
             main.Add(contact);
 
-            Console.WriteLine("\n");      
+            Console.WriteLine("\n");
+
+           /* var result = new List<Contact>();
+            foreach (var value  in main)
+            {
+                if (!result.Contains(value))
+                    result.Add(value);
+            }*/
+            
         }
         public void Display()
         { 
